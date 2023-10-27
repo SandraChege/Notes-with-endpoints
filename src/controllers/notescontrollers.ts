@@ -1,11 +1,14 @@
-import express, {Request, Response } from "express";
+import express, { Request, Response } from "express";
 import { sqlConfig } from "../config/dbconfig";
 import sql from 'mssql';
     
 export const createTask = (req: Request, res: Response) => {
     const { title, content } = req.body;
-
     const createdAt = new Date();
+    // console.log(title, content); 
+
+    console.log(req.body);
+    
 
     const query = `
     INSERT INTO notes

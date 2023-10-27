@@ -11,10 +11,7 @@ const { PORT} = process.env
 //  console.log("hello");
 // });
 
-app.listen("/", (req, res) => {
-    res.send("hello from homee")
-});
-
+app.use("/", note_router);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}`);

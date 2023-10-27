@@ -4,13 +4,13 @@ import { createTask, FetchAllNotes, getNoteByID, deleteNoteByID } from "../contr
 
 const note_router = Router();
 
-note_router.get("/", createTask);
+note_router.post("/", createTask);
 
 note_router.get("/fetch", FetchAllNotes);
 
 note_router.get("/getNote", getNoteByID);
 
-note_router.get("/delete", deleteNoteByID);
+note_router.delete("/delete", deleteNoteByID);
 
 export default note_router;
 
